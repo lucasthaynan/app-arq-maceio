@@ -31,7 +31,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 20px 20px;
     padding: 10px 0px 15px 0px;
 }
 
@@ -80,7 +80,8 @@ section.news-home {
     flex-direction: row;
     gap: 10px;
     padding-bottom: 20px;
-    padding-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     overflow: auto;
 	white-space: nowrap; 
@@ -89,8 +90,8 @@ section.news-home {
 }
 
 .menu > div.btn-menu {
-    min-width: 70px;
-    height: 70px;
+    min-width: 85px;
+    height: 85px;
     background-color: var(--branco);
     border-radius: 15px;
     display: flex;
@@ -98,17 +99,17 @@ section.news-home {
     align-items: center;
     justify-content: center;
     padding: 3px;
-    gap: 3px;
+    gap: 5px;
     
 }
 
 div.btn-menu img {
-    width: 30px;
+    width: 38px;
     height:max-content;
 }
 
 div.btn-menu p {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--azul-botoes);
     font-weight: 500;
 }
