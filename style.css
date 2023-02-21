@@ -30,6 +30,18 @@ section#infos-paroquia {
     display: none;
 }
 
+section#seminarios {
+    display: none;
+}
+
+
+section#infos-seminarios {
+    display: none;
+}
+
+/*  */
+
+
 body {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
@@ -111,8 +123,16 @@ div.news-home {
     overflow: auto;
 	white-space: nowrap; 
     width: 100%;
-    /* overflow: hidden; */
+
+    /* ocultando barra de scroll */
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
 }
+
+.container.home .menu::-webkit-scrollbar {
+    width: 0 !important;
+}
+
 
 .menu > div.btn-menu {
     min-width: 85px;
@@ -299,4 +319,11 @@ input[type="text"] {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Seminário e conventos */
+
+section#seminarios .title-page p {
+    font-size: 1.2rem;
+
 }
