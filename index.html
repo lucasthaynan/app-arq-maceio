@@ -8,43 +8,35 @@
     <title>App Arquidiocese de Maceió</title>
 </head>
 <body>
-    <header class="header-top">
-        <div class="container home">
-            <div class="logo">
-                <img src="./image/Brasão-Fundo-Transparente 1.png" alt="">
-                <p>Arquidiocese de Maceió</p>
-            </div>
-            <div class="menu">
-                <div class="btn-menu">
-                    <img src="./image/paroquia.png" alt="">
-                    <p>Paróquia</p>
+    <section id="home">
+        <header class="header-top">
+            <div class="container home">
+                <div class="logo">
+                    <img src="./image/Brasão-Fundo-Transparente 1.png" alt="">
+                    <p>Arquidiocese de Maceió</p>
                 </div>
-                <div class="btn-menu">
-                    <img src="./image/paroquia.png" alt="">
-                    <p>Paróquia</p>
-                </div>
-                <div class="btn-menu">
-                    <img src="./image/paroquia.png" alt="">
-                    <p>Paróquia</p>
-                </div>
-                <div class="btn-menu">
-                    <img src="./image/paroquia.png" alt="">
-                    <p>Paróquia</p>
-                </div>
-                <div class="btn-menu">
-                    <img src="./image/paroquia.png" alt="">
-                    <p>Paróquia</p>
-                </div>
-                <div class="btn-menu">
-                    <img src="./image/paroquia.png" alt="">
-                    <p>Paróquia</p>
+                <div class="menu">
+                    <div class="btn-menu paroquia">
+                        <img src="./image/btn-paroquia.svg" alt="">
+                    </div>
+                    <div class="btn-menu conventos">
+                        <img src="./image/btn-seminarios-conventos.svg" alt="">
+                    </div>
+                    <div class="btn-menu videos">
+                        <img src="./image/btn-videos.svg" alt="">
+                    </div>
+                    <div class="btn-menu podcast">
+                        <img src="./image/btn-podcast.svg" alt="">
+                    </div>
+                    <div class="btn-menu contato">
+                        <img src="./image/btn-contato.svg" alt="">
+                    </div>
+                    
                 </div>
             </div>
             
-        </div>
-    </header>
-    <main>
-        <section class="news-home">
+        </header>
+        <div class="news-home">
             <h2>Últimas notícias</h2>
             <div class="container-news">
                 <div class="news">
@@ -97,9 +89,93 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <section id="paroquias">
+        <header class="page">
+            <div class="container-page paroquia">
+                <div class="arrow">
+                    <img src="./image/Back Icon.svg" alt="">
+                </div>
+                <div class="title-page">
+                    <img src="./image/paroquia.svg" alt="">
+                    <p>Paróquias</p>
+                </div>
+            </div>
+        </header>
+        <div class="list-paroquias">
+            <div class="search">
+                <input type="text" placeholder="Buscar paróquia ou localidade">
+                <div class="btn">
+                    <img src="./image/Search.svg" alt="">
+                </div>
+            </div>
+            <div class="list-view">
+                <div class="paroquia">
+                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
+                    <p class="local">Salvador Lyra</p>
+                </div>
+                <div class="paroquia">
+                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
+                    <p class="local">Salvador Lyra</p>
+                </div>
+                <div class="paroquia">
+                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
+                    <p class="local">Salvador Lyra</p>
+                </div>
+                <div class="paroquia">
+                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
+                    <p class="local">Salvador Lyra</p>
+                </div>
+                <div class="paroquia">
+                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
+                    <p class="local">Salvador Lyra</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="infos-paroquia">
+        <header class="page">
+            <div class="container-page paroquia">
+                <div class="arrow">
+                    <img src="./image/Back Icon.svg" alt="">
+                </div>
+                <div class="title-page">
+                    <p class="nome-paroquia">Paróquia São Paulo Apóstolo</p>
+                </div>
+            </div>
+        </header>
+        <div class="all-infos">
+            <img class="photo-paroquia" src="./image/photo_news.jpeg" alt="">
+            <div class="buttons-redes">
+                <img src="./image/btn-redes.svg" alt="">
+                <img src="./image/btn-redes.svg" alt="">
+                <img src="./image/btn-redes.svg" alt="">
+                <img src="./image/btn-redes.svg" alt="">
+                <img src="./image/btn-redes.svg" alt="">
+            </div>
+
+            <p class="fundacao"><strong>Fundação: </strong>10/10/1990</p>
+
+            <p class="paroco"><strong>Pároco: </strong> Pe. Manoel José</p>
+
+            <p class="missas"><strong>Horários de Missa: </strong><br>
+                Sábado  - 7h e às 19h<br>
+                Domingo - 7h e às 19h<br>
+                Segunda  - 7h e às 19h<br>
+                Terça - 7h e às 19h</p>
+
+            <p class="historia"><strong>Sobre a Paróquia: </strong><br>
+                
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+            </p>
+        </div>
+        
+    </section>
     
 
     <script src="main.js"></script>

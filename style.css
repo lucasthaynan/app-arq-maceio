@@ -1,10 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --azul-fundo: #052F63;
+    --azul-botoes: #115B8F;
+    --branco: #ffffff;
+    --cinza-fundo: #e1e3e8;
+    --cinza-barra: #F1F5F8;
+    --amarelo: #F5CE02;
+}
+
 * {  
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box; /* Limitar tamanho de todas as caixas contando padding e margin */
+}
+
+
+
+/* section#home {
+    display: none;
+} */
+
+section#paroquias {
+    display: none;
+}
+
+section#infos-paroquia {
+    display: none;
 }
 
 body {
@@ -14,12 +37,6 @@ body {
 }
 
 
-:root {
-    --azul-fundo: #052F63;
-    --azul-botoes: #115B8F;
-    --branco: #ffffff;
-
-}
 
 body {
     display: flex;
@@ -32,7 +49,11 @@ header {
     top: 0;
     width: 100%;
     border-radius: 0 0 20px 20px;
-    padding: 10px 0px 15px 0px;
+    padding: 10px 0px 0px 0px;
+}
+
+header.page {
+    height: 120px;
 }
 
 main {
@@ -40,7 +61,8 @@ main {
     
 }
 
-section.news-home {
+div.news-home {
+    margin-top: 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -54,6 +76,9 @@ section.news-home {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    display: flex;
+    /* display: none; */
 }
 
 .logo {
@@ -104,7 +129,7 @@ section.news-home {
 }
 
 div.btn-menu img {
-    width: 38px;
+    width: 80px;
     height:max-content;
 }
 
@@ -128,9 +153,9 @@ div.btn-menu p {
 }
 
 .news img {
-    width: 120px;
-    height: 85px;
-    max-width: 120px;
+    width: 135px;
+    height: 100px;
+    max-width: 135px;
     width: 100%;
     object-fit: cover;
     object-position: bottom;
@@ -144,9 +169,134 @@ div.btn-menu p {
 }
 
 .news .textos p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .news .textos h2 {
+    font-size: 1rem;
+}
+
+.container-page {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.container-page .arrow {
+    position: fixed;
+    left: 30px;
+}
+
+.title-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    gap: 7px;
+}
+
+.title-page p {
+    font-size: 1.4rem;
+    color: var(--branco);
+}
+
+.title-page img {
+    width: 38px;
+}
+
+/* PAROQUIAS */
+
+div.list-paroquias {
+    margin-top: 130px;
+    padding: 10px 20px;
+}
+
+.list-view {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px auto;
+}
+
+.list-view .paroquia {
+    background-color: var(--cinza-fundo);
+    padding: 22px;
+    height: 140px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.list-view .paroquia h2 {
+    font-size: 1rem;
+}
+
+.list-view .paroquia p {
     font-size: 0.9rem;
+    
+}
+
+/* INFOS PAROQUIA */
+
+section#infos-paroquia p.nome-paroquia {
+    width: 200px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+section#infos-paroquia .all-infos {
+    margin-top: 125px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.all-infos img.photo-paroquia {
+    border-radius: 15px;
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+
+}
+
+.all-infos .buttons-redes {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+}
+
+.list-paroquias .search {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    width: 90%;
+    height: 35px;
+    background-color: var(--cinza-barra);
+    border: 0;
+    border-radius: 8px 0 0 8px;
+    padding: 5px 20px;
+}
+
+.search .btn {
+    width: 10%;
+    height: 35px;
+    background-color: var(--amarelo);
+    border-radius: 0px 8px 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
