@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
     <title>App Arquidiocese de Maceió</title>
 </head>
 <body>
@@ -12,7 +14,7 @@
         <header class="header-top">
             <div class="container home">
                 <div class="logo">
-                    <img src="./image/Brasão-Fundo-Transparente 1.png" alt="">
+                    <img src="./image/brasao_arq_maceio.png" alt="">
                     <p>Arquidiocese de Maceió</p>
                 </div>
                 <div class="menu">
@@ -39,55 +41,52 @@
         <div class="news-home">
             <h2>Últimas notícias</h2>
             <div class="container-news">
+
+                <svg id="loading-spinner" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <defs>
+                      <linearGradient id="spinner-gradient-a" x1="49.892%" x2="55.03%" y1="58.241%" y2="89.889%">
+                        <stop offset="0%"/>
+                        <stop offset="22.44%" stop-opacity=".59"/>
+                        <stop offset="100%" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <g fill="none" transform="translate(-8 -8)">
+                      <path d="M32,56 C18.745166,56 8,45.254834 8,32 C8,18.745166 18.745166,8 32,8 C45.254834,8 56,18.745166 56,32 C56,45.254834 45.254834,56 32,56 Z M32,52 C43.045695,52 52,43.045695 52,32 C52,20.954305 43.045695,12 32,12 C20.954305,12 12,20.954305 12,32 C12,43.045695 20.954305,52 32,52 Z"/>
+                      <path fill="url(#spinner-gradient-a)" d="M56,32 C56,33.1045695 55.1045695,34 54,34 C52.8954305,34 52,33.1045695 52,32 C52,20.954305 43.045695,12 32,12 C20.954305,12 12,20.954305 12,32 C12,43.045695 20.954305,52 32,52 C33.1045695,52 34,52.8954305 34,54 C34,55.1045695 33.1045695,56 32,56 C18.745166,56 8,45.254834 8,32 C8,18.745166 18.745166,8 32,8 C45.254834,8 56,18.745166 56,32 Z" transform="rotate(45 32 32)"/>
+                    </g>
+                  </svg>
+<!--                 
+                <div class="news">
+                    <img src="./image/photo_fake.png" alt="">
+                    <div class="textos">
+                        <p></p>
+                        <a href="" target="_blank">
+                            <h2></h2>
+                        </a>
+                    </div>
+                </div>
+
+
                 <div class="news">
                     <img src="./image/photo_news.jpeg" alt="">
                     <div class="textos">
                         <p>Publicada em 08/04/2022</p>
-                        <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
+                        <a href="" target="_blank">
+                            <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
+                        </a>
                     </div>
                 </div>
+
                 <div class="news">
                     <img src="./image/photo_news.jpeg" alt="">
                     <div class="textos">
                         <p>Publicada em 08/04/2022</p>
-                        <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
+                        <a href="" target="_blank">
+                            <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
+                        </a>
                     </div>
-                </div>
-                <div class="news">
-                    <img src="./image/photo_news.jpeg" alt="">
-                    <div class="textos">
-                        <p>Publicada em 08/04/2022</p>
-                        <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
-                    </div>
-                </div>
-                <div class="news">
-                    <img src="./image/photo_news.jpeg" alt="">
-                    <div class="textos">
-                        <p>Publicada em 08/04/2022</p>
-                        <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
-                    </div>
-                </div>
-                <div class="news">
-                    <img src="./image/photo_news.jpeg" alt="">
-                    <div class="textos">
-                        <p>Publicada em 08/04/2022</p>
-                        <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
-                    </div>
-                </div>
-                <div class="news">
-                    <img src="./image/photo_news.jpeg" alt="">
-                    <div class="textos">
-                        <p>Publicada em 08/04/2022</p>
-                        <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
-                    </div>
-                </div>
-                <div class="news">
-                    <img src="./image/photo_news.jpeg" alt="">
-                    <div class="textos">
-                        <p>Publicada em 08/04/2022</p>
-                        <h2>Lorem Ipsum giving information on its origins as well Lipsum generato</h2>
-                    </div>
-                </div>
+                </div> -->
+                
             </div>
         </div>
     </section>
@@ -106,32 +105,17 @@
         </header>
         <div class="list-paroquias">
             <div class="search">
-                <input type="text" placeholder="Buscar paróquia ou localidade">
+                <input id="search-input" type="text" placeholder="Buscar paróquia ou localidade">
                 <div class="btn">
                     <img src="./image/Search.svg" alt="">
                 </div>
             </div>
             <div class="list-view">
-                <div class="paroquia">
+                <!-- <div id="p1" class="paroquia">
                     <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
                     <p class="local">Salvador Lyra</p>
                 </div>
-                <div class="paroquia">
-                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
-                    <p class="local">Salvador Lyra</p>
-                </div>
-                <div class="paroquia">
-                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
-                    <p class="local">Salvador Lyra</p>
-                </div>
-                <div class="paroquia">
-                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
-                    <p class="local">Salvador Lyra</p>
-                </div>
-                <div class="paroquia">
-                    <h2 class="nome">Paróquia São Paulo Apóstolo</h2>
-                    <p class="local">Salvador Lyra</p>
-                </div>
+                 -->
             </div>
         </div>
         
